@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+
+# Runtime secrets and state
+openclaw.json
+openclaw.local.json
+*.bak
+logs/
+devices/
+identity/
+qqbot/sessions/
+exec-approvals.json
+update-check.json
+
+# Agent runtime state
+agents/**/auth-state.json
+agents/**/auth-profiles.json
+agents/**/sessions/
+
+# Local work dirs
+workspace/**/.git/
+workspace/**/.openclaw/
+workspace/**/memory/
+
+# Temp files
+*.log
+*.tmp
+*.swp

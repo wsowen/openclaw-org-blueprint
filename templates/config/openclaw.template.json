@@ -1,0 +1,149 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "__OPENCLAW_HOME__/workspace",
+      "models": {
+        "deepseek/deepseek-chat": {
+          "alias": "DeepSeek"
+        },
+        "deepseek/deepseek-reasoner": {}
+      },
+      "model": {
+        "primary": "deepseek/deepseek-reasoner"
+      }
+    },
+    "list": [
+      {
+        "id": "diana-chief-of-staff",
+        "name": "Diana / Chief of Staff",
+        "workspace": "__OPENCLAW_HOME__/workspace",
+        "agentDir": "__OPENCLAW_HOME__/agents/main/agent",
+        "model": "deepseek/deepseek-reasoner"
+      },
+      {
+        "id": "maya-operations-lead",
+        "name": "Maya / Operations Lead",
+        "workspace": "__OPENCLAW_HOME__/workspace/operating",
+        "agentDir": "__OPENCLAW_HOME__/agents/operating/agent",
+        "model": "deepseek/deepseek-chat"
+      },
+      {
+        "id": "iris-finance-operations-lead",
+        "name": "Iris / Finance Operations Lead",
+        "workspace": "__OPENCLAW_HOME__/workspace/financing",
+        "agentDir": "__OPENCLAW_HOME__/agents/financing/agent",
+        "model": "deepseek/deepseek-chat"
+      },
+      {
+        "id": "athena-investment-analyst",
+        "name": "Athena / Investment Analyst",
+        "workspace": "__OPENCLAW_HOME__/workspace/investment",
+        "agentDir": "__OPENCLAW_HOME__/agents/investment/agent",
+        "model": "deepseek/deepseek-reasoner"
+      }
+    ]
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "__GATEWAY_TOKEN__"
+    },
+    "port": 18789,
+    "bind": "loopback",
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "controlUi": {
+      "allowInsecureAuth": false
+    }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "tools": {
+    "profile": "coding"
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "deepseek": {
+        "baseUrl": "https://api.deepseek.com",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "deepseek-chat",
+            "name": "DeepSeek Chat",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 131072,
+            "maxTokens": 8192,
+            "cost": {
+              "input": 0.28,
+              "output": 0.42,
+              "cacheRead": 0.028,
+              "cacheWrite": 0
+            },
+            "compat": {
+              "supportsUsageInStreaming": true
+            },
+            "api": "openai-completions"
+          },
+          {
+            "id": "deepseek-reasoner",
+            "name": "DeepSeek Reasoner",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 131072,
+            "maxTokens": 65536,
+            "cost": {
+              "input": 0.28,
+              "output": 0.42,
+              "cacheRead": 0.028,
+              "cacheWrite": 0
+            },
+            "compat": {
+              "supportsUsageInStreaming": true
+            },
+            "api": "openai-completions"
+          }
+        ]
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "deepseek:default": {
+        "provider": "deepseek",
+        "mode": "api_key"
+      }
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "deepseek": {
+        "enabled": true
+      }
+    }
+  },
+  "channels": {
+    "qqbot": {
+      "enabled": false,
+      "allowFrom": [
+        "*"
+      ],
+      "appId": "__QQ_APP_ID__",
+      "clientSecret": "__QQ_CLIENT_SECRET__"
+    }
+  }
+}
