@@ -1,3 +1,5 @@
+> Current status: heartbeat checks are paused until the user explicitly re-enables scheduled polling. Keep this file as a reference checklist only.
+
 # HEARTBEAT.md
 
 # 主工作区心跳只做“低风险、可追溯、能带来管理价值”的检查。
@@ -19,6 +21,11 @@
 - 在有行情和研究输入时，检查是否有需要重点关注的市场变化或风险提示
 - 如果缺少最新行情或来源不足，只标记“待补行情”，不要输出硬性投资结论
 
+## Customer Service Checks
+
+- 在有客服会话、工单或投诉输入时，检查是否存在高优先级待响应事项
+- 对超出 FAQ 或 SOP 的情况，默认标记为需人工确认或升级
+
 ## Knowledge Checks
 
 - 优先使用已确认的制度文档和 SOP 回答问题
@@ -30,3 +37,4 @@
 - 财务数据冲突或异常影响经营判断时，提醒升级
 - 涉及审批、付款、承诺、重大投诉时，默认提醒人工确认
 - 投资分析缺少关键市场数据或超出已知风控边界时，默认提醒人工确认
+- 客服投诉、赔付、升级争议超出已知规则时，默认提醒人工确认

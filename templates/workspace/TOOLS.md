@@ -6,7 +6,7 @@
 
 - OpenClaw 工作目录：`/Users/owensmac/.openclaw`
 - 主工作区：`/Users/owensmac/.openclaw/workspace`
-- 已注册子工作区：`operating`、`financing`、`investment`
+- 已注册子工作区：`operating`、`financing`、`investment`、`customer-service`
 - 当前消息入口：QQ Bot 已启用
 - 当前网关模式：本机 `local`
 
@@ -16,6 +16,7 @@
 - `maya-operations-lead` → `Maya / Operations Lead`
 - `iris-finance-operations-lead` → `Iris / Finance Operations Lead`
 - `athena-investment-analyst` → `Athena / Investment Analyst`
+- `clara-customer-service-lead` → `Clara / Customer Service Lead`
 
 ## First-Phase Data Sources
 
@@ -52,6 +53,13 @@
 - 自建观察名单：待登记
 - 风控约束与禁投清单：待登记
 
+### Customer Service Inputs
+
+- 客服 FAQ：待登记
+- 售后 SOP：待登记
+- 投诉处理规则：待登记
+- 工单或会话记录来源：待登记
+
 ## Evidence Requirements
 
 主工作区在使用任何数据源前，应尽量记录以下信息：
@@ -72,6 +80,7 @@
 - 财务异常提醒
 - 制度/SOP 类问答
 - 投资标的的资料归纳与分析草案
+- 客服 FAQ 与 SOP 范围内的应答草案
 
 第一阶段默认不自动执行的动作：
 
@@ -80,6 +89,7 @@
 - 跨团队强制派单
 - 修改业务系统关键数据
 - 自动下单或自动给出确定性的投资执行指令
+- 自动替公司对客户做赔付、补偿或承诺性答复
 
 ## To Complete
 

@@ -1,3 +1,5 @@
+> Current status: heartbeat checks are paused until the user explicitly re-enables scheduled polling. Keep this file as a reference checklist only.
+
 # HEARTBEAT.md
 
 ## Daily Checks

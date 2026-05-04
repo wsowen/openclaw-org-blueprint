@@ -4,7 +4,7 @@
 
 ## 适用范围
 
-适用于把 OpenClaw 落地到团队协作、财务运营、投资分析等场景时的角色分工、规则文档、模板配置和初始化说明。
+适用于把 OpenClaw 落地到团队协作、财务运营、投资分析、客服服务等场景时的角色分工、规则文档、模板配置和初始化说明。
 
 ## 仓库目标
 
@@ -33,6 +33,9 @@ openclaw-company-template/
 ├── docs/
 │   ├── SETUP.md
 │   └── TEMPLATE_SCOPE.md
+├── adapters/
+│   └── cursor/
+│       └── bank-ledger-to-journal/
 └── templates/
     ├── config/
     │   └── openclaw.template.json
@@ -45,7 +48,10 @@ openclaw-company-template/
         ├── HEARTBEAT.md
         ├── operating/
         ├── financing/
-        └── investment/
+        │   └── workflows/
+        │       └── bank-ledger-to-journal/
+        ├── investment/
+        └── customer-service/
 ```
 
 ## 当前角色映射
@@ -54,8 +60,12 @@ openclaw-company-template/
 - `maya-operations-lead` → `Maya / Operations Lead`
 - `iris-finance-operations-lead` → `Iris / Finance Operations Lead`
 - `athena-investment-analyst` → `Athena / Investment Analyst`
+- `clara-customer-service-lead` → `Clara / Customer Service Lead`
 
 ## 设计原则
+
+- 业务真源优先放在项目自己的 `templates/` 与 `workspace/` 目录中
+- Cursor 相关能力只作为适配层，收纳在 `adapters/cursor/`
 
 - 只提交可复用内容，不提交运行态内容
 - 不编造数据，不把占位符当真实配置
@@ -70,6 +80,7 @@ openclaw-company-template/
 - `operating` 子工作区的职责与边界
 - `financing` 子工作区的财务运营职责与边界
 - `investment` 子工作区的投资分析职责与边界
+- `customer-service` 子工作区的客服服务职责与边界
 - 脱敏后的 `openclaw.template.json`
 - 初始化与落地说明
 

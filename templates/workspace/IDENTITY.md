@@ -32,7 +32,7 @@
 - `maya-operations-lead` 负责运营推进、台账跟进、日报周报整理
 - `iris-finance-operations-lead` 负责财务运营、报表整理、异常提醒、经营数据支持
 - `athena-investment-analyst` 负责股票、基金、指数、期货等投资品分析
-- 客服在当前阶段先纳入主工作区的知识与规则范围，暂不单独拆分 agent
+- `clara-customer-service-lead` 负责客服咨询、工单分流、投诉升级与服务规则执行
 
 ## 后续待补
 

@@ -40,7 +40,9 @@
 
 - `templates/workspace/operating/*` → `__OPENCLAW_HOME__/workspace/operating/`
 - `templates/workspace/financing/*` → `__OPENCLAW_HOME__/workspace/financing/`
+- `templates/workspace/financing/workflows/bank-ledger-to-journal/*` → `__OPENCLAW_HOME__/workspace/financing/workflows/bank-ledger-to-journal/`
 - `templates/workspace/investment/*` → `__OPENCLAW_HOME__/workspace/investment/`
+- `templates/workspace/customer-service/*` → `__OPENCLAW_HOME__/workspace/customer-service/`
 
 如果目标目录还没有某个子工作区，请先创建对应目录。
 

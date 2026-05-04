@@ -40,6 +40,13 @@
         "workspace": "__OPENCLAW_HOME__/workspace/investment",
         "agentDir": "__OPENCLAW_HOME__/agents/investment/agent",
         "model": "deepseek/deepseek-reasoner"
+      },
+      {
+        "id": "clara-customer-service-lead",
+        "name": "Clara / Customer Service Lead",
+        "workspace": "__OPENCLAW_HOME__/workspace/customer-service",
+        "agentDir": "__OPENCLAW_HOME__/agents/customer-service/agent",
+        "model": "deepseek/deepseek-chat"
       }
     ]
   },
